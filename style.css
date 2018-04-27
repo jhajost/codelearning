@@ -1,5 +1,5 @@
 body {
-	background: #222;
+	background: #BBBFC5;
 	color: #eee;
 	font-size: 15px;
 }
@@ -42,4 +42,40 @@ p {
 footer {
 	padding: 10px;
 	background: grey;
+}
+h3 {
+	margin-top: 1em;
+}
+ol {
+	padding: 20px;
+}
+li#best {
+	margin-bottom: 15px;
+	font-size: 20px;
+	font-weight: bold;
+}
+li.dramat {
+	color: #392957;
+}
+li.komediodramat {
+	background: -webkit-linear-gradient(#69260A, #392957);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+li.czarna.komedia {
+	background: -webkit-linear-gradient(#69260A, black);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+li.sensacja {
+	color: #BE9651;
+}
+li.thriller {
+	color: #D60000;
+}
+li.sci-fi {
+	color: #001D2C;
+}
+li.fantasy {
+	color: #1D3209;
 }
