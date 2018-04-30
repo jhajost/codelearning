@@ -35,9 +35,34 @@ header ul li {
 }
 main {
 	padding: 2em 5%;
+	display: flex;
+	flex-wrap: wrap
+}
+#content {
+	background: #fff;
+	color: #222;
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: 70%
+}
+aside {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 30%;
+	min-width: calc(250px - 4rem);
+}
+#content, aside {
+	padding: 2rem;
 }
 p {
 	margin-top: 1em;
+}
+p:first-child {
+	margin-top: 0;
+}
+aside {
+	background: #001D2C;
+	color: #B4BDAB;
 }
 footer {
 	padding: 10px;
@@ -74,8 +99,77 @@ li.thriller {
 	color: #D60000;
 }
 li.sci-fi {
-	color: #001D2C;
+	color: orange;
 }
 li.fantasy {
 	color: #1D3209;
+}
+.aligncenter {
+	float: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.alignright {
+	float: right;
+	margin-left: 1em;
+	margin-bottom: 1em;
+}
+.aligncenter {
+	display: block;
+	margin: 1em auto;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+.clearright {
+	clear: right;
+}
+.clearboth {
+	clear: both;
+}
+/*
+One Page Layout
+*/
+#one-page main {
+	display: block;
+	padding: 0
+}
+.white {
+	background: white;
+	color: black;
+}
+.blue {
+	background: blue;
+	color: white;
+}
+.green {
+	background: green;
+	color: white;
+}
+#one-page main section {
+	padding: 5rem 5%;
+}
+#one-page section h1 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+#hello .content {
+	column-count: 3;
+	column-gap: 2rem;
+	max-width: unset;
+}
+section .content {
+	max-width: 750px;
+	margin: 0 auto;
+}
+#one-page {
+	padding-top: 74px;
+}
+#one-page header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	box-shadow: 0 6px 6px -4px rgba(0,0,0,0.2);
 }
