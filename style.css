@@ -1,11 +1,11 @@
 body {
-	background: #BBBFC5;
+	background: #39AB39;
 	color: #eee;
 	font-size: 15px;
 }
 a {
 	text-decoration: none;
-	color: #8b0000;
+	color: #2B6E2B;
 }
 li.current {
 	font-weight: bold;
@@ -22,7 +22,7 @@ main.row {
 }
 header {
 	background: #fff;
-	color: #000;
+	color: #193719;
 	padding: 20px;
 	display: flex;
 	align-items: center;
@@ -61,12 +61,12 @@ p:first-child {
 	margin-top: 0;
 }
 aside {
-	background: #001D2C;
-	color: #B4BDAB;
+	background: #f2f2f2;
+	color: #193719;
 }
 footer {
 	padding: 10px;
-	background: grey;
+	background: #193719;
 }
 h3 {
 	margin-top: 1em;
@@ -79,31 +79,16 @@ li#best {
 	font-size: 20px;
 	font-weight: bold;
 }
-li.dramat {
-	color: #392957;
+li.easy {
+	color: #ADD603;
 }
-li.komediodramat {
-	background: -webkit-linear-gradient(#69260A, #392957);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+li.medium {
+	color: #6F66C7;
 }
-li.czarna.komedia {
-	background: -webkit-linear-gradient(#69260A, black);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+li.advanced {
+	color: #DF4A03;
 }
-li.sensacja {
-	color: #BE9651;
-}
-li.thriller {
-	color: #D60000;
-}
-li.sci-fi {
-	color: orange;
-}
-li.fantasy {
-	color: #1D3209;
-}
+
 .aligncenter {
 	float: center;
 	margin-top: 1em;
@@ -140,11 +125,11 @@ One Page Layout
 	color: black;
 }
 .blue {
-	background: blue;
+	background: #2C69A8;
 	color: white;
 }
 .green {
-	background: green;
+	background: #29CA34;
 	color: white;
 }
 #one-page main section {
