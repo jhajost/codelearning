@@ -215,6 +215,45 @@ section .content {
 	z-index: 10;
 	box-shadow: 0 6px 6px -4px rgba(0,0,0,0.2);
 }
+/*
+obrazek w tle
+*/
+.background {
+	position: relative;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+.background h3 {
+	font-stretch: semi-expanded;
+	text-align: center;
+	max-width: 100%;
+	padding-top: 10px;
+}
+.background p {
+	text-align: center;
+	padding-bottom: 20px;
+}
+/*
+Warstwa przyciemniająca obrazek w tle
+*/
+.background:before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #333;
+	opacity: 0.4;
+	content: "";
+}
+.background-content {
+	position: relative;
+}
+/*
+koniec warstwy przyciemniającej
+*/
+
 
 /*
 Responsywna wersja strony
@@ -290,7 +329,19 @@ Responsywna wersja strony
 		background-position: center center;
 		background-attachment: scroll;
 	}
-
+	.background:before {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #38D638;
+		opacity: 0.2;
+		content: "";
+	}
+	.background-content {
+		position: relative;
+	}
 	/*
 	coby liczba kolumn w mobilnej była inna
 	*/
@@ -300,39 +351,3 @@ Responsywna wersja strony
 }
 /*
 koniec responsywnej wersji strony
-
-obrazek w tle
-*/
-.background {
-	position: relative;
-	background-size: cover;
-	background-position: center center;
-	background-attachment: fixed;
-}
-.background h3 {
-	font-stretch: semi-expanded;
-	text-align: center;
-	max-width: 100%;
-	padding-top: 10px;
-}
-.background p {
-	text-align: center;
-	padding-bottom: 20px;
-}
-/*
-Warstwa przyciemniająca obrazek w tle
-*/
-.background:before {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: #333;
-	opacity: 0.4;
-	content: "";
-	position: relative;
-}
-/*
-koniec warstwy przyciemniającej
-*/
