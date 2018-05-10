@@ -276,14 +276,13 @@ Responsywna wersja strony
 		transition: all 0.3s;
 		z-index: 1;
 	}
-	nav li {
+	header ul li {
 		display: block;
 		padding: 20px 0;
 		z-index: 1;
 	}
-	header ul {
-		display: block;
-		padding: 10px;
+	header ul li a {
+		display: block};
 	}
 	.background {
 		background-attachment: scroll;
