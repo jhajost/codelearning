@@ -285,6 +285,9 @@ Responsywna wersja strony
 		display: block};
 	}
 	.background {
+		position: relative;
+		background-size: cover;
+		background-position: center center;
 		background-attachment: scroll;
 	}
 
@@ -297,6 +300,7 @@ Responsywna wersja strony
 }
 /*
 koniec responsywnej wersji strony
+
 obrazek w tle
 */
 .background {
