@@ -280,6 +280,9 @@ Responsywna wersja strony
 		display: block;
 		padding: 20px 0;
 	}
+	nav ul {
+		display: block;
+	}
 	.background {
 		background-attachment: scroll;
 	}
