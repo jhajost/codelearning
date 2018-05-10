@@ -281,7 +281,11 @@ One-page responsive
 */
 	#hello .content {
 		column-count: 1;
+	}
 }
 
-
+.background {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
 }
