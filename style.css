@@ -279,9 +279,11 @@ Responsywna wersja strony
 	nav li {
 		display: block;
 		padding: 20px 0;
+		z-index: 1;
 	}
-	nav ul {
+	header ul {
 		display: block;
+		padding: 10px;
 	}
 	.background {
 		background-attachment: scroll;
