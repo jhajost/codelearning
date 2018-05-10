@@ -39,6 +39,7 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between
+	z-index: 10;
 }
 
 header ul li {
@@ -94,10 +95,13 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Cinzel', serif;
 }
 
-h3 {
+aside h3 {
 	margin-top: 1em;
 }
 
+#content h2 {
+	margin-top: 1em;	
+}
 ol {
 	padding: 20px;
 }
@@ -202,7 +206,7 @@ section .content {
 }
 
 #one-page {
-	padding-top: 74px;
+	padding-top: 80px;
 }
 
 #one-page header {
@@ -266,7 +270,7 @@ Responsywna wersja strony
 
 	nav {
 		position: absolute;
-		top: 74px;
+		top: 80px;
 		background: #39AB39;
 		width: 100%;
 		left: -100%;
@@ -283,9 +287,35 @@ One-page responsive
 		column-count: 1;
 	}
 }
-
+/*
+obrazek w tle
+*/
 .background {
-    position: relative;
-    background-size: cover;
-    background-position: center center;
+	position: relative;
+	background-size: cover;
+	background-position: center center;
+}
+.background h3 {
+	font-stretch: semi-expanded;
+	text-align: center;
+	max-width: 100%;
+	padding-top: 10px;
+}
+.background p {
+	text-align: center;
+	padding-bottom: 20px;
+}
+/*
+Warstwa przyciemniająca obrazek w tle
+*/
+.background:before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #333;
+	opacity: 0.4;
+	content: "";
+	position: relative;
 }
