@@ -274,25 +274,32 @@ Responsywna wersja strony
 		width: 100%;
 		left: -100%;
 		transition: all 0.3s;
+		z-index: 1;
 	}
 	nav li {
 		display: block;
 		padding: 20px 0;
 	}
-/*
-One-page responsive
-*/
+	.background {
+		background-attachment: scroll;
+	}
+
+	/*
+	coby liczba kolumn w mobilnej była inna
+	*/
 	#hello .content {
 		column-count: 1;
 	}
 }
 /*
+koniec responsywnej wersji strony
 obrazek w tle
 */
 .background {
 	position: relative;
 	background-size: cover;
 	background-position: center center;
+	background-attachment: fixed;
 }
 .background h3 {
 	font-stretch: semi-expanded;
@@ -318,3 +325,6 @@ Warstwa przyciemniająca obrazek w tle
 	content: "";
 	position: relative;
 }
+/*
+koniec warstwy przyciemniającej
+*/
