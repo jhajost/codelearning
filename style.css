@@ -1,27 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel:700|Raleway:400,400i,700&subset=latin-ext');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
 body {
 	background: #39AB39;
 	color: #eee;
 	font-family: 'Raleway', sans-serif;
 	font-size: 15px;
 }
+
+#menu-button {
+	display: none;
+}
+
 a {
 	text-decoration: none;
 	color: #2B6E2B;
 }
+
 li.current {
 	font-weight: bold;
 }
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
+
 main.row {
 	max-width: 1200px;
 	width: 90%;
 	margin: 0 auto;
 }
+
 header {
 	background: #fff;
 	color: #193719;
@@ -30,16 +40,19 @@ header {
 	align-items: center;
 	justify-content: space-between
 }
+
 header ul li {
 	list-style-type: none;
 	display: inline-block;
 	margin-left: 1em;
 }
+
 main {
 	padding: 2em 5%;
 	display: flex;
 	flex-wrap: wrap
 }
+
 #content {
 	background: #fff;
 	color: #222;
@@ -47,49 +60,62 @@ main {
 	flex-shrink: 0;
 	flex-basis: 70%
 }
+
 aside {
 	flex-grow: 1;
 	flex-shrink: 1;
 	flex-basis: 30%;
 	min-width: calc(250px - 4rem);
 }
+
 #content, aside {
 	padding: 2rem;
 }
+
 p {
 	margin-top: 1em;
 }
+
 p:first-child {
 	margin-top: 0;
 }
+
 aside {
 	background: #f2f2f2;
 	color: #193719;
 }
+
 footer {
 	padding: 10px;
 	background: #193719;
 }
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Cinzel', serif;
 }
+
 h3 {
 	margin-top: 1em;
 }
+
 ol {
 	padding: 20px;
 }
+
 li#best {
 	margin-bottom: 15px;
 	font-size: 20px;
 	font-weight: bold;
 }
+
 li.easy {
 	color: #ADD603;
 }
+
 li.medium {
 	color: #6F66C7;
 }
+
 li.advanced {
 	color: #DF4A03;
 }
@@ -99,67 +125,157 @@ li.advanced {
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
+
 .alignright {
 	float: right;
 	margin-left: 1em;
 	margin-bottom: 1em;
 }
+
 .aligncenter {
 	display: block;
 	margin: 1em auto;
 }
+
 img {
 	max-width: 100%;
 	height: auto;
 }
+
 .clearright {
 	clear: right;
 }
+
 .clearboth {
 	clear: both;
 }
+
+
 /*
 FAQ Layout // formerly known as one-page
 */
+
 #one-page main {
 	display: block;
 	padding: 0
 }
+
 .white {
 	background: white;
 	color: black;
 }
+
 .blue {
 	background: #2C69A8;
 	color: white;
 }
+
 .green {
 	background: #29CA34;
 	color: white;
 }
+
 #one-page main section {
 	padding: 3rem 5%;
 }
+
 #one-page section h1 {
 	text-align: center;
 	margin-bottom: 1em;
 }
+
 #hello .content {
 	column-count: 3;
 	column-gap: 1rem;
 	max-width: unset;
 }
+
 section .content {
 	max-width: 750px;
 	margin: 0 auto;
 }
+
 #one-page {
 	padding-top: 74px;
 }
+
 #one-page header {
 	width: 100%;
 	position: fixed;
 	top: 0;
 	z-index: 10;
 	box-shadow: 0 6px 6px -4px rgba(0,0,0,0.2);
+}
+
+/*
+Responsywna wersja strony
+*/
+
+@media screen and (max-width: 800px) {
+	
+	#menu-button {
+		display: block;
+		background: #38D638;
+		color: #2B6E2B;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		position: relative;
+	}
+
+	#menu-button i {
+		transition: all 0.3s;
+	}
+
+	#menu-button i ~ i {
+		position: absolute;
+		height: 40px;
+		width: 40px;
+		line-height: 40px;
+		text-align: center;
+		top: 0;
+		right: 0;
+		transform: scale(0,0);
+	}
+
+	#menu-button:focus {
+		background: #2B6E2B;
+		color: #fff;
+		outline: none;
+		pointer-events: none;
+	}
+
+	#menu-button:focus i {
+		transform: scale(0,0);
+	}
+
+	#menu-button:focus i ~ i {
+		transform: scale(1,1);
+	}
+
+	#menu-button:focus + nav {
+		left: 0;
+	}
+
+	nav {
+		position: absolute;
+		top: 74px;
+		background: #39AB39;
+		width: 100%;
+		left: -100%;
+		transition: all 0.3s;
+	}
+	nav li {
+		display: block;
+		padding: 20px 0;
+	}
+/*
+One-page responsive
+*/
+	#hello .content {
+		column-count: 1;
+}
+
+
 }
