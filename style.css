@@ -225,13 +225,9 @@ obrazek w tle
 	background-attachment: fixed;
 }
 .background h3 {
-	font-stretch: semi-expanded;
-	text-align: center;
-	max-width: 100%;
 	padding-top: 10px;
 }
 .background p {
-	text-align: center;
 	padding-bottom: 20px;
 }
 /*
@@ -243,12 +239,19 @@ Warstwa przyciemniająca obrazek w tle
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: #333;
-	opacity: 0.4;
+	background: #193719;
+	opacity: 0.5;
 	content: "";
+	transition: all 1s;
 }
 .background-content {
 	position: relative;
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+#one-page .background-content {
+	padding: 5rem 0;
 }
 /*
 koniec warstwy przyciemniającej
@@ -324,23 +327,11 @@ Responsywna wersja strony
 		display: block;
 	}
 	.background {
-		position: relative;
-		background-size: cover;
-		background-position: center center;
 		background-attachment: scroll;
+		color: #000;
 	}
 	.background:before {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
 		background: #38D638;
-		opacity: 0.2;
-		content: "";
-	}
-	.background-content {
-		position: relative;
 	}
 	/*
 	coby liczba kolumn w mobilnej była inna
