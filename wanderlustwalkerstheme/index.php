@@ -1,3 +1,4 @@
+<?php get_header(); ?>	
 	<section class="background" style="background-image: url('https://picsum.photos/1500/500?image=62');">
 		<div class="background-content">
 			<h3>“A journey of a thousand miles starts with a first step.”</h3>
@@ -27,3 +28,4 @@
 			</ol>
 		</aside>
 	</main>
+<?php get_footer(); ?>
