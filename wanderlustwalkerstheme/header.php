@@ -20,10 +20,10 @@
 			<i class="fa fa-times"></i>
 		</a>
 		<nav>
-			<?php wp_nav_menu( array(
+			<?php wp_nav_menu( 
+			array(
 				'theme_location' => 'nav_menu',
-				'depth' => 1,
-			) );
-			?>
+				'depth' => 1
+			) ); ?>
 		</nav>
 	</header>

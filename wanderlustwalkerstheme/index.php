@@ -9,9 +9,17 @@
 		<section id="content">
 			<div id="posts">
 			<?php if ( have_posts() ) {
-				while (have_posts()) : the_post();
-				// tu będziemy wyświetlać posty!
-				endwhile;
+				while (have_posts()) : the_post();?>
+				<article class="post">
+					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+					<div class="post-meta">
+						<i class="fa fa-calendar-i"></i> <?php the_time('j F Y'); ?> <br>
+						<i class="fa fa-user"></i> <?php the_author(); ?>
+					</div>
+				<?php the_post_thumbnail(); ?>
+				<?php the_content(); ?>
+				</article>
+			<?php endwhile;
 			} ?>
 
 			</div>
